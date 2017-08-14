@@ -1,0 +1,58 @@
+#!/bin/bash
+#
+# bin/build [-v/--verbose]
+#
+# Build custom versions of lodash and jQuery used for in the survey embed JS
+# package.
+#
+set -e
+
+bin_dir="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
+root_dir="${bin_dir%/*}"
+javascripts_dir="${root_dir}/lib"
+
+quiet=1
+for i in "$@"; do
+  case $i in
+    -v|--verbose)
+      unset quiet
+    ;;
+  esac
+done
+
+# ------------------------------------------------------------------------------
+
+jquery_dir="${root_dir}/node_modules/jquery"
+
+# jQuery module we don't need.
+remove_modules="-ajax,-deprecated,-effects,-event/alias,-wrap,-exports/global,-exports/amd"
+
+
+cd ${jquery_dir}
+
+# JS dependencies via npm
+echo -e "\n\nUpdate jQuery JS npm dependencies...\n"
+yarn install ${quiet:+--quiet} ${quiet:+--loglevel error}
+
+# Build our custom build
+echo -e "\n\nCompiling custom jQuery build...\n"
+./node_modules/.bin/grunt custom:${remove_modules}
+
+# Copy to our vendor dir. Using jquery.embed.js to avoid collisions.
+cd ${jquery_dir}
+cp dist/jquery.js ${javascripts_dir}/jquery.js
+
+cd ${javascripts_dir}
+
+# lodash functions we use
+lodash_functions="isString,isArray,isNumber,isPlainObject,merge,assign,clone,forEach,includes,some,find,delay,debounce,uniqueId,map,keys,difference,escape,filter,isFunction"
+
+echo -e "\n\nCompiling custom Lo-Dash build...\n"
+${root_dir}/node_modules/.bin/lodash -d -o lodash.js \
+    exports=none \
+    include=${lodash_functions} \
+    iife="(function() {%output%  return lodash;}.call(this));"
+
+# ------------------------------------------------------------------------------
+
+cd ${root_dir}
