@@ -45,7 +45,7 @@ cp dist/jquery.js ${javascripts_dir}/jquery.js
 cd ${javascripts_dir}
 
 # lodash functions we use
-lodash_functions="isString,isArray,isNumber,isPlainObject,merge,assign,clone,forEach,includes,some,find,delay,debounce,uniqueId,map,keys,difference,escape,filter,isFunction"
+lodash_functions="isString,isArray,isNumber,isPlainObject,merge,assign,clone,forEach,includes,some,find,delay,debounce,uniqueId,map,keys,difference,escape,filter,isFunction,isEqual"
 
 echo -e "\n\nCompiling custom Lo-Dash build...\n"
 ${root_dir}/node_modules/.bin/lodash -d -o lodash.js \
