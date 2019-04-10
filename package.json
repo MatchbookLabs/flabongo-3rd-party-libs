@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "jquery": "https://github.com/jquery/jquery/archive/1.11.1.tar.gz",
-    "lodash-cli": "^4.17.5"
+    "lodash-cli": "https://github.com/lodash-archive/lodash-cli.git#e6f02c291f3580c43a1630ff9cf9070ad7bdcf40"
   }
 }
