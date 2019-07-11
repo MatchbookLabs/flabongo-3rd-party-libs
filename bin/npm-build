@@ -32,7 +32,7 @@ cd ${jquery_dir}
 
 # JS dependencies via npm
 echo -e "\n\nUpdate jQuery JS npm dependencies...\n"
-yarn install ${quiet:+--quiet} ${quiet:+--loglevel error}
+npm install
 
 # Build our custom build
 echo -e "\n\nCompiling custom jQuery build...\n"
