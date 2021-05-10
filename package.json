@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "jquery": "https://github.com/jquery/jquery",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.21",
     "lodash-cli": "^4.17.5"
   }
 }
