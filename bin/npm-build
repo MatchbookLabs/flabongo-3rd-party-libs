@@ -30,9 +30,9 @@ remove_modules="-ajax,-deprecated,-effects,-event/alias,-wrap,-exports/global,-e
 
 cd ${jquery_dir}
 
-# JS dependencies via npm
-echo -e "\n\nUpdate jQuery JS npm dependencies...\n"
-npm install
+# JS dependencies via yarn
+echo -e "\n\nUpdate jQuery JS yarn dependencies...\n"
+yarn install --ignore-engines ${quiet:+--quiet} ${quiet:+--loglevel error}
 
 # Build our custom build
 echo -e "\n\nCompiling custom jQuery build...\n"

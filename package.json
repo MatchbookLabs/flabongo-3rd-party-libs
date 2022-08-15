@@ -1,6 +1,6 @@
 {
   "name": "flabongo-3rd-party-libs",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Built 3rd party libraries for Flabongo",
   "repository": "https://www.github.com/matchbooklabs/flabongo-3rd-party-libs",
   "author": "Cody Lundquist <cody@getfeedback.com>",
@@ -9,8 +9,10 @@
     "build": "./bin/npm-build"
   },
   "dependencies": {
-    "jquery": "https://github.com/jquery/jquery",
-    "lodash": "^4.17.14",
+    "jquery": "https://github.com/jquery/jquery#3.6.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
     "lodash-cli": "^4.17.5"
   }
 }
