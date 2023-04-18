@@ -124,7 +124,7 @@ lazy-cache@^1.0.3:
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
   integrity sha1-odePw6UEdMuAhF07O24dpJpEbo4=
 
-lodash-cli@^4.17.13:
+lodash-cli@^4.17.5:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash-cli/-/lodash-cli-4.17.5.tgz#1bab72c8c9980febf4fe7a1900b0971ce040dd0b"
   integrity sha512-eeQi+oVS76ofP791g4wEGs4B4nyc4fiHboUCc0BzM8qCkLAzqbroewOt98A8ISoY1HH2di00pENNErXf0MWxiw==
@@ -151,9 +151,9 @@ longest@^1.0.1:
   integrity sha1-MKCy2jj3N3DoKUoNIuZiXtd9AJc=
 
 minimatch@^3.0.2:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
-  integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"
+  integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
   dependencies:
     brace-expansion "^1.1.7"
 
